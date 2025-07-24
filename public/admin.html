@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+    <div id="login-screen">
+        <h2>Acceso Administrador</h2>
+        <input type="email" id="admin-email" placeholder="Email">
+        <input type="password" id="admin-password" placeholder="Contraseña">
+        <button id="btn-login">Ingresar</button>
+        <div id="login-message"></div>
+    </div>
+    
+    <div id="dashboard" class="hidden">
+        <h1>Panel de Control</h1>
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Tickets Vendidos</h3>
+                <p id="sold-tickets">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Recaudado</h3>
+                <p id="total-amount">Bs. 0,00</p>
+            </div>
+            <div class="stat-card">
+                <h3>Pagos Pendientes</h3>
+                <p id="pending-payments">0</p>
+            </div>
+        </div>
+        
+        <h2>Últimos Pagos</h2>
+        <div id="payments-list"></div>
+        
+        <button id="btn-logout">Cerrar Sesión</button>
+    </div>
+    
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="assets/js/admin.js"></script>
+</body>
+</html>
